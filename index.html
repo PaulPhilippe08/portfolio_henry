@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.jpg" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Accueil</a></li>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Photographe-Monteur-Vidéaste-Graphiste</p>
+          <h1>
+            Salut, je suis <span>THIMOTHE HENRY NYAFOUNA</span><br />Le chouchou
+            des nanas
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!----------------about--------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">A propos de moi</h1>
+            <br />
+            <p>
+              Jeune et dynamique, je possède une expérience dans la création et
+              la gestion de contenus digitaux. Passioné par l'innovation et la
+              créativité, j'élabore des stratégies de communication percutantes
+              et conçois des supports visuels attractifs. Organisé, proactif et
+              orienté vers les résultats, je suis capable de travailler en
+              équipe et mettre mon expertise au service du renforcement de
+              l'image de marque et du développement des communautés en ligne.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Compétences
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Expériences
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <!-- COMPÉTENCES -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <!-- Photographie -->
+                <li>
+                  <span>Photographie</span>
+                  <ul>
+                    <li>
+                      Connaissance approfondie des réglages d'un appareil photo
+                      (ouverture, vitesse, ISO) et de l'éclairage naturel ou
+                      artificiel.
+                    </li>
+                    <div
+                      id="more-photographie"
+                      class="voir-plus-content"
+                      style="display: none"
+                    >
+                      <li>
+                        Sens artistique : Capacité à composer une image
+                        équilibrée, jouer avec les couleurs, les textures et les
+                        perspectives.
+                      </li>
+                      <li>
+                        Adaptabilité : Pouvoir s'adapter à différents
+                        environnements et conditions de prise de vue, en studio
+                        ou en extérieur.
+                      </li>
+                      <li>
+                        Post-traitement : Utilisation de logiciels comme
+                        Lightroom ou Photoshop pour sublimer les clichés.
+                      </li>
+                      <li>
+                        Communication : Capacité à diriger un modèle, comprendre
+                        les attentes d'un client et raconter une histoire à
+                        travers ses images.
+                      </li>
+                    </div>
+                    <button
+                      onclick="toggleMore('more-photographie', this)"
+                      class="voir-plus-btn"
+                      style="border: 1px solid #000; padding: 5px 10px"
+                    >
+                      Voir plus
+                    </button>
+                  </ul>
+                </li>
+
+                <!-- Montage -->
+                <li>
+                  <span>Montage</span>
+                  <ul>
+                    <li>
+                      Maîtrise des logiciels : Adobe Premiere Pro, Final Cut
+                      Pro, DaVinci Resolve.
+                    </li>
+                    <div
+                      id="more-montage"
+                      class="voir-plus-content"
+                      style="display: none"
+                    >
+                      <li>
+                        Sens narratif : Structurer une histoire pour capter
+                        l'attention et transmettre une émotion.
+                      </li>
+                      <li>
+                        Synchronisation audio : Ajustement précis de musique,
+                        effets sonores et dialogues.
+                      </li>
+                      <li>
+                        Créativité : Adapter le style visuel à chaque projet
+                        (clip, pub, docu…).
+                      </li>
+                      <li>
+                        Post-traitement : Colorimétrie, transitions, effets
+                        visuels.
+                      </li>
+                    </div>
+                    <button
+                      onclick="toggleMore('more-montage', this)"
+                      class="voir-plus-btn"
+                      style="border: 1px solid #000; padding: 5px 10px"
+                    >
+                      Voir plus
+                    </button>
+                  </ul>
+                </li>
+
+                <!-- Vidéaste -->
+                <li>
+                  <span>Vidéaste</span>
+                  <ul>
+                    <li>
+                      Maîtrise technique : Caméras, objectifs, éclairage, prise
+                      de son.
+                    </li>
+                    <div
+                      id="more-videaste"
+                      class="voir-plus-content"
+                      style="display: none"
+                    >
+                      <li>
+                        Création d'émotions : Utiliser l'image, la musique et le
+                        rythme pour provoquer des sentiments chez le spectateur.
+                      </li>
+                      <li>
+                        Sens du rythme : Trouver le bon équilibre entre les
+                        séquences rapides et lentes pour maintenir l'attention.
+                      </li>
+                      <li>
+                        Maîtrise du cadrage et des plans : Choisir des angles et
+                        des compositions qui appuient la narration et renforcent
+                        l'impact visuel.
+                      </li>
+                      <li>
+                        Gestion de projet : Tournage, coordination, respect des
+                        délais.
+                      </li>
+                    </div>
+                    <button
+                      onclick="toggleMore('more-videaste', this)"
+                      class="voir-plus-btn"
+                      style="border: 1px solid #000; padding: 5px 10px"
+                    >
+                      Voir plus
+                    </button>
+                  </ul>
+                </li>
+
+                <!-- Graphiste -->
+                <li>
+                  <span>Graphiste</span>
+                  <ul>
+                    <li>
+                      Illustration numérique – Savoir créer des dessins et des
+                      visuels uniques à l’aide de logiciels comme Adobe
+                      Illustrator ou Procreate.
+                    </li>
+                    <div
+                      id="more-graphiste"
+                      class="voir-plus-content"
+                      style="display: none"
+                    >
+                      <li>
+                        Animation graphique – Maîtriser le motion design pour
+                        donner vie aux visuels avec des animations dynamiques.
+                      </li>
+                      <li>
+                        Conception UX/UI – Comprendre l’expérience utilisateur
+                        pour créer des interfaces intuitives et esthétiques.
+                      </li>
+                      <li>
+                        Gestion de marque – Développer une identité visuelle
+                        cohérente pour une entreprise ou un projet.
+                      </li>
+                      <li>
+                        Impression et packaging – Savoir adapter les designs aux
+                        supports imprimés et aux emballages pour un rendu
+                        professionnel.
+                      </li>
+                    </div>
+                    <button
+                      onclick="toggleMore('more-graphiste', this)"
+                      class="voir-plus-btn"
+                      style="border: 1px solid #000; padding: 5px 10px"
+                    >
+                      Voir plus
+                    </button>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- EXPÉRIENCE -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>FRAN6CONCEPT (Photographe-Vidéaste-Graphiste) </span
+                  ><br />
+                  <small>2024-Présent</small>
+                  <p>
+                    Réalisation de shootings photo couverture vidéo pour divers
+                    événements. Montage et color grading des videos, retouche
+                    des photos. Conception de support graphiques.
+                  </p>
+                </li>
+                <li>
+                  <span
+                    >ECCLESIA CHOIR (ASSIST. COMMUNITY MANAGER, MONTEUR,
+                    GRAPHISTE)</span
+                  ><br />
+                  <small>2023-Présent</small>
+                  <p>
+                    Proposition de contenus pour l'animation des communautés en
+                    lignes. Montages et post-production de vidéos
+                    promotionnelles pour divers supports digiteaux. Création de
+                    support graphiques attractifs.
+                  </p>
+                </li>
+                <li>
+                  <span
+                    >CHORALE MARIE AUXILIATRICE (ASSIST. COMMUNITY MANAGER,
+                    VIDEASTE, GRAPHISTE)</span
+                  ><br />
+                  <small>2023-Présent</small>
+                  <p>
+                    Proposition de contenus pour l'animation des communautés en
+                    lignes. Montages et post-production de vidéos
+                    promotionnelles pour divers supports digiteaux. Création de
+                    support graphiques attractifs.
+                  </p>
+                </li>
+                <li>
+                  <span
+                    >YESHUA GOSPEL (RESP. COMMUNICATION, COMMUNITY MANAGER,
+                    GRAPHISTE)</span
+                  ><br />
+                  <small>2022-Présent</small>
+                  <p>
+                    Définition et mise en place de la stratégie de communication
+                    globale Animation des réseaux sociaux et création de
+                    contenus engageants Conception de supports graphiques
+                    cohérents pour renforcer l'image.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Education -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>SUP'IMAX (Licence)</span><br />
+                  <small>2023-Présent</small>
+                  <p>
+                    Première année de licence en Audio-Visuel et Art-Graphique.
+                  </p>
+                </li>
+                <li>
+                  <span>UCAD (Licence)</span><br />
+                  <small>2022-2023</small>
+                  <p>
+                    Première année de licence à la Faculté des Sciences
+                    Économiques et Sociales.
+                  </p>
+                </li>
+                <li>
+                  <span>LYCÉE SEYDINA LIMAMOU LAYE (Baccalaureat)</span><br />
+                  <small>2021-2022</small>
+                  <p>
+                    Baccalaureat en Sciences et Techniques de l'Économie et de
+                    la Gestion (STEG).
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- JS -->
+            <script>
+              var tablinks = document.getElementsByClassName("tab-links");
+              var tabcontents = document.getElementsByClassName("tab-contents");
+
+              function opentab(tabname) {
+                for (let tablink of tablinks) {
+                  tablink.classList.remove("active-link");
+                }
+                for (let tabcontent of tabcontents) {
+                  tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+              }
+
+              function toggleMore(id, button) {
+                const content = document.getElementById(id);
+                const isVisible = content.style.display === "block";
+                content.style.display = isVisible ? "none" : "block";
+                button.textContent = isVisible ? "Voir plus" : "Voir moins";
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title left-align">Mes Services</h1>
+
+        <div class="services-cards-wrapper">
+          <div class="service-card">
+            <h2><i class="fas fa-camera"></i> Photographie</h2>
+            <p>
+              Capturer l'instant avec sensibilité et précision à travers un
+              regard artistique et technique.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h2><i class="fas fa-scissors"></i> Montage</h2>
+            <p>
+              Donner du rythme, structurer l'histoire et sublimer les images
+              avec des logiciels professionnels.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h2><i class="fas fa-video"></i> Vidéaste</h2>
+            <p>
+              Créer des récits visuels puissants avec maîtrise de la lumière, du
+              son et du storytelling.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h2><i class="fas fa-paint-brush"></i> Graphiste</h2>
+            <p>
+              Donner vie aux idées à travers des visuels uniques : illustration
+              numérique, motion design, UX/UI, identité visuelle et packaging
+              percutant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projets -->
+    <div id="projets">
+      <div class="container">
+        <h1 class="sub-title left-align">Mes Projets</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.jpg" />
+            <div class="layer">
+              <h3></h3>
+              <p>Séance photo à la plage des mamelles.📍DKR,SN</p>
+              <a
+                href="https://www.instagram.com/p/DG_BLQINz1-/?igsh=NzJxZDRlbTFtbnNm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-2.jpg" />
+            <div class="layer">
+              <h3></h3>
+              <p>Plongée au cœur de la biennale de Dakar📸</p>
+              <a
+                href="https://www.instagram.com/p/DDhiEkatQrk/?igsh=Y2F1cjc0dm44bzQ2"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.jpg" />
+            <div class="layer">
+              <h3></h3>
+              <p>Joal, Fadiouth autrement appelé l'ile aux coquillages 🐚😍</p>
+              <a
+                href="https://www.instagram.com/p/C-3VdR9t236/?igsh=MWN1NTYydnp1dGtpag=="
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://drive.google.com/drive/folders/1Ya8Qls8ExcBwjra23tt3BHL7PzaXbn0P?usp=share_link"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Voir plus</a
+        >
+      </div>
+    </div>
+    <!-- Contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contactez-Moi</h1>
+            <p><i class="fas fa-paper-plane"></i>hnyafouna16@gmail.com</p>
+            <p><i class="fas fa-phone-square-alt"></i>+221 77 691 69 32</p>
+            <div class="social-icons">
+              <a
+                href="https://snapchat.com/t/wrFqtFut"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-snapchat"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/henrycapo_photography?igsh=b2o0M2RqbHFrODQ%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://x.com/henry_capooooo?s=11"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/thimoth%C3%A9-henry-nyafouna-a56490296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <a href="images/CV Henry.pdf" download class="btn btn2"
+              >Télécharger mon CV</a
+            >
+          </div>
+
+          <div class="contact-right">
+            <form action="https://formspree.io/f/meognzgw" method="POST">
+              <input type="text" name="name" placeholder="Votre Nom" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Votre Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Votre Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>
+        Copyright © 2025 Henry. Fait par Paul Philippe Aimé COLY avec
+        <i class="fas fa-heart"></i>. Tous droits reservés.
+      </p>
+    </div>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
