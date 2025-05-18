@@ -474,51 +474,29 @@
           </div>
 
           <div class="contact-right">
-  <form id="contactForm">
-    <input type="text" id="name" name="name" placeholder="Votre Nom" required />
-    <input type="email" id="email" name="email" placeholder="Votre Email" required />
-    <textarea id="message" name="message" rows="6" placeholder="Votre Message" required></textarea>
-    <button type="submit" class="btn btn2">Envoyer</button>
-    <div id="formMessage"></div>
-  </form>
+  <form action="http://formspree.io/f/meognzgw" method="POST">
+  <input type="text" name="nom" placeholder="Votre nom" required>
+  <input type="email" name="email" placeholder="Votre email" required>
+  <textarea name="message" placeholder="Votre message" required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-      };
 
-      try {
-        const response = await fetch('http://localhost:5000/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
-        });
+<p id="confirmation-message" style="display: none; color: green;">Message envoyé avec succès !</p>
 
-        const data = await response.json();
-        
-        const messageDiv = document.getElementById('formMessage');
-        if (data.success) {
-          messageDiv.style.color = 'green';
-          messageDiv.textContent = 'Message envoyé avec succès!';
-          document.getElementById('contactForm').reset();
-        } else {
-          messageDiv.style.color = 'red';
-          messageDiv.textContent = data.message || "Erreur lors de l'envoi";
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        document.getElementById('formMessage').style.color = 'red';
-        document.getElementById('formMessage').textContent = "Erreur de connexion au serveur";
-      }
-    });
-  </script>
+<script>
+  const form = document.getElementById('contact-form');
+  const confirmationMessage = document.getElementById('confirmation-message');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Tu peux ici faire une petite validation si tu veux
+    confirmationMessage.style.display = 'block';
+    form.reset();
+  });
+</script>
+
 </div>
           </div>
         </div>
