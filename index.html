@@ -10,7 +10,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
-    <link rel="stylesheet" href="script.js" />
   </head>
   <body>
     <div id="header">
@@ -29,7 +28,10 @@
         </nav>
         <div class="header-text">
           <p>Photographe-Monteur-Vidéaste-Graphiste</p>
-          <h1>Salut, je suis <span>THIMOTHE HENRY NYAFOUNA</span></h1>
+          <h1>
+            Salut, je suis <span>THIMOTHE HENRY NYAFOUNA</span><br />Le chouchou
+            des nanas
+          </h1>
         </div>
       </div>
     </div>
@@ -311,6 +313,29 @@
                 </li>
               </ul>
             </div>
+
+            <script>
+              var tablinks = document.getElementsByClassName("tab-links");
+              var tabcontents = document.getElementsByClassName("tab-contents");
+
+              function opentab(tabname) {
+                for (let tablink of tablinks) {
+                  tablink.classList.remove("active-link");
+                }
+                for (let tabcontent of tabcontents) {
+                  tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+              }
+
+              function toggleMore(id, button) {
+                const content = document.getElementById(id);
+                const isVisible = content.style.display === "block";
+                content.style.display = isVisible ? "none" : "block";
+                button.textContent = isVisible ? "Voir plus" : "Voir moins";
+              }
+            </script>
           </div>
         </div>
       </div>
@@ -479,5 +504,16 @@
         <i class="fas fa-heart"></i>. Tous droits reservés.
       </p>
     </div>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
