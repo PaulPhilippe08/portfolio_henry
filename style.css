@@ -11,6 +11,10 @@ body {
   background: #080808;
   color: #fff;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 #header {
   width: 100%;
   height: 100vh;
@@ -138,16 +142,13 @@ nav ul li a:hover::after {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-
 .voir-plus-btn:hover {
   background-color: #f0f0f0;
 }
-
 .voir-plus-content {
   display: none;
   margin-top: 8px;
 }
-
 ul ul {
   margin-top: 6px;
 }
@@ -164,7 +165,6 @@ ul ul {
 .sub-title.left-align {
   text-align: left;
 }
-
 .services-cards-wrapper {
   display: flex;
   gap: 20px;
@@ -172,7 +172,6 @@ ul ul {
   flex-wrap: wrap;
   margin-top: 30px;
 }
-
 .service-card {
   flex: 1;
   min-width: 250px;
@@ -181,25 +180,21 @@ ul ul {
   border-radius: 15px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #000; /* Texte en noir */
+  color: #000;
 }
-
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-
 .service-card h2 {
   margin-bottom: 10px;
   color: #b3844f;
   font-size: 20px;
 }
-
 .service-card h2 i {
   margin-right: 8px;
   color: #b3844f;
 }
-
 .service-card a {
   display: inline-block;
   margin-top: 15px;
@@ -282,7 +277,6 @@ ul ul {
 .btn:hover {
   background: #b3844f;
 }
-
 .contact-left {
   flex-basis: 35%;
 }
@@ -365,7 +359,6 @@ form .btn2 {
     flex-basis: 100%;
   }
 }
-
 nav .fas {
   display: none;
 }
@@ -413,9 +406,6 @@ nav ul .fas {
 .about-col-2 {
   margin-bottom: 30px;
 }
-.about-col-1 {
-  margin-bottom: 30px;
-}
 .about-col-2 {
   font-size: 14px;
 }
@@ -429,4 +419,59 @@ nav ul .fas {
 }
 .copyright {
   font-size: 14px;
+}
+
+/* 📱 Responsive très petit écran (320-400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 10px 5%;
+  }
+
+  .header-text {
+    margin-top: 50%;
+    font-size: 14px;
+  }
+
+  .header-text h1 {
+    font-size: clamp(24px, 5vw, 30px);
+  }
+
+  .tab-titles {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-links {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .service-card h2 {
+    font-size: 16px;
+  }
+
+  .voir-plus-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .btn,
+  .btn2 {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .contact-left p i {
+    font-size: 20px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding: 15px 0;
+  }
 }
