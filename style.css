@@ -590,6 +590,6 @@ nav ul .fas {
 /* Grands écrans (1025px et +) */
 @media only screen and (min-width: 1025px) {
   .header-text {
-    margin-top: 35%;
+    margin-top: 30%;
   }
 }
