@@ -7,6 +7,10 @@
 html {
   scroll-behavior: smooth;
 }
+p1 {
+  font-size: 24px;
+  color: white;
+}
 body {
   background: #080808;
   color: #fff;
@@ -18,18 +22,18 @@ img {
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(images/background.png);
+  background-image: url(images/fond_henry.png);
   background-size: cover;
   background-position: center;
 }
 .container {
-  padding: 10px 10%;
+  padding: 10px 5%;
 }
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: left;
   flex-wrap: wrap;
+  padding-top: 30px;
 }
 .logo {
   width: 140px;
@@ -59,12 +63,12 @@ nav ul li a:hover::after {
   width: 100%;
 }
 .header-text {
-  margin-top: 20%;
+  margin-top: 28%;
   font-size: 30px;
 }
 .header-text h1 {
   font-size: 60px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .header-text h1 span {
   color: #b3844f;
@@ -179,7 +183,9 @@ ul ul {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   color: #000;
 }
 .service-card:hover {
@@ -216,9 +222,16 @@ ul ul {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+}
+.work > a {
+  display: block;
+  text-decoration: none;
 }
 .work img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -339,9 +352,41 @@ form .btn2 {
   font-weight: 300;
   margin-top: 20px;
 }
+
 .copyright i {
   color: #b3844f;
+  display: inline-block;
+  animation: heartbeat 1.2s ease-in-out infinite;
 }
+
+.copyright i:hover {
+  animation: heartbeat 0.8s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -358,20 +403,36 @@ form .btn2 {
   .contact-right {
     flex-basis: 100%;
   }
+
+  .work img {
+    height: 250px;
+  }
 }
 nav .fas {
   display: none;
 }
 @media only screen and (max-width: 600px) {
   #header {
-    background-image: url(images/phone-background.jpg);
+    background-image: url(images/fond_henry.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .container {
+    padding: 10px 5%;
   }
   .header-text {
-    margin-top: 100%;
-    font-size: 16px;
+    margin-top: 135%;
+    font-size: 14px;
   }
   .header-text h1 {
-    font-size: 30px;
+    font-size: 24px;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  .header-text p1 {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
   }
   nav .fas {
     display: block;
@@ -391,6 +452,14 @@ nav .fas {
   nav ul li {
     display: block;
     margin: 25px;
+  }
+  nav {
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+  .work img {
+    height: 220px;
   }
 }
 nav ul .fas {
@@ -421,18 +490,35 @@ nav ul .fas {
   font-size: 14px;
 }
 
+@media (max-width: 480px) {
+  .header-text {
+    font-size: 12px;
+  }
+  .header-text h1 {
+    font-size: 20px;
+  }
+  .header-text p1 {
+    font-size: 14px;
+  }
+  .work img {
+    height: 200px;
+  }
+}
+
 @media (max-width: 320px) {
   .container {
     padding: 10px 5%;
   }
 
   .header-text {
-    margin-top: 50%;
-    font-size: 14px;
+    margin-top: 105%;
+    font-size: 11px;
   }
-
   .header-text h1 {
-    font-size: clamp(24px, 5vw, 30px);
+    font-size: 18px;
+  }
+  .header-text p1 {
+    font-size: 12px;
   }
 
   .tab-titles {
@@ -472,5 +558,38 @@ nav ul .fas {
   .copyright {
     font-size: 12px;
     padding: 15px 0;
+  }
+
+  .work img {
+    height: 180px;
+  }
+}
+
+.about-col-1 img {
+  width: 85%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+/* Tablettes (601px - 765px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .header-text {
+    margin-top: 70%;
+  }
+}
+
+/* Tablettes larges (766px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header-text {
+    margin-top: 100%;
+  }
+}
+
+/* Grands écrans (1025px et +) */
+@media only screen and (min-width: 1025px) {
+  .header-text {
+    margin-top: 36%;
   }
 }
